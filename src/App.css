@@ -1,38 +1,74 @@
+body {
+  background-color: rgb(204, 181, 181);
+}
+
 .App {
   text-align: center;
+  height: 400px;
+  width: 300px;
+  display: inline-flex;
+  flex-direction: column;
+  margin-left: 20%;
+  margin-top: 20%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.button {
+  color: white;
+  border: 1px solid black;
+  border-radius: 0px;
+  font-size: 18px;
+  font-family: impact;
+  opacity: 0.8;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.button:hover {
+  color: black;
+  opacity: 1;
+  border: 1px solid white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#one, #two, #three, #four, #five, #six, #seven, #eight, #nine, #zero, #decimal {
+  background-color: rgb(99, 99, 99);
+}
+
+#equals {
+  background-color: blue;
+}
+
+#clear {
+  background-color: red;
+}
+
+#divide, #multiply, #add, #subtract {
+  background-color: rgb(170, 170, 170)
+}
+
+#button-grid {
+  width: 100%;
+  height: 90%;
+  display: grid;
+  grid-template-areas:
+  "clear clear divide multiply"
+  "seven eight nine subtract"
+  "four five six add"
+  "one two three equals"
+  "zero zero decimal equals"
+}
+
+#display-div {
+  border: 1px solid black;
+  height: 10%;
+  width: 100%;
+  text-align: left;
+  font-family: impact;
+  font-size: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  justify-content: space-between;
+  padding: 3px;
 
-.App-link {
-  color: #61dafb;
 }
+#display, #display-output {
+  height: 20px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
